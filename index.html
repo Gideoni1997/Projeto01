@@ -60,7 +60,7 @@
 							<li><a href="#">Schedule</a></li>
 							<li class="search">
 								<div class="input-group">
-							      <input type="search" placeholder="search">
+							      <input type="search" placeholder="search" id="input-search">
 							      <span class="input-group-btn">
 							        <button type="button"><i class="fa fa-search"></i></button>
 							      </span>
@@ -230,6 +230,21 @@
 
 									<p><a href="tel:1855ORLCITY"><i class="fa fa-phone"></i>1.855.ORL.CITY</a></p>
 
+									<ul class="list-unstyled list-socials">
+										<li>
+											<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+										</li>
+										<li>
+											<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+										</li>
+										<li>
+											<a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+										</li>
+										<li>
+											<a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+										</li>
+									</ul>
+
 								</div>
 							</div>
 
@@ -256,6 +271,25 @@
 
 		<script src="lib/jquery/jquery.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+
+				$("#logotipo").on("mouseover", function(){
+					$("#banner h1").addClass("efeito");
+				}).on("mouseout", function(){
+					$("#banner h1").removeClass("efeito");
+				});
+
+				$("#input-search").on("focus", function(){
+
+					$("li.search").addClass("ativo");
+
+				}).on("blur", function(){
+					$("li.search").removeClass("ativo");
+				});
+
+			});
+		</script>
 
 	</body>
 </html>
